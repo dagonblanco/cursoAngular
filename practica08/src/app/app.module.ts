@@ -8,13 +8,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ListadoClientesComponent } from './clientes/listado-clientes/listado-clientes.component';
 import { VerClienteComponent } from './clientes/ver-cliente/ver-cliente.component';
 import { CargaSuaveDirective } from './directivas/carga-suave.directive';
+import { rutas_app } from './app.routes';
 
-const rutas: Routes = [
-  { path: '', component: InicioComponent },
-  { path: 'listado-clientes', component: ListadoClientesComponent, data: { titulo: 'Listado de Clientes' } },
-  { path: 'ver-cliente/:id', component: VerClienteComponent },
-  { path: '**', component: InicioComponent } //Siempre al final!
-];
+
 
 @NgModule({
   declarations: [
@@ -27,7 +23,7 @@ const rutas: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(rutas)
+    rutas_app
   ],
   providers: [],
   bootstrap: [AppComponent]
