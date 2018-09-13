@@ -1,0 +1,7 @@
+<div class="contenedor">
+    <h2>Prueba de ngClass</h2>
+    <p>Introduce la clase: </p>
+    <input type="text" [(ngModel)]="puntos">
+    <p>La puntuación es:</p> 
+    <h3><div [ngClass]="puntos">La puntuación es {{puntos}}</div> </h3>
+  </div>

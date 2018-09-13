@@ -1,0 +1,14 @@
+<div class="contenedor" appCargaSuave>
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Detalles</th>
+        </tr>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.nombre}}</td>
+            <!-- <td><a routerLink="/ver-cliente/{{cliente._id}}"> Ver detalle </a></td> -->
+            <td><a (click)="navTo(cliente._id)"> Ver detalle </a></td>
+        </tr>
+    </table>
+</div>

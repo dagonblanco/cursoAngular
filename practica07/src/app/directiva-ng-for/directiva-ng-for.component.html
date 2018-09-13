@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <h2>Ejemplo de directiva *ngFor</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>CIF</th>
+    </tr>
+    <tr *ngFor="let clienteActual of clientes; let i = index; let isEven = even; let isOdd = odd">
+      <td>{{(i) | number: '2.0-0'}}</td>
+      <td>{{clienteActual.nombre}}</td>
+      <td>{{clienteActual.cif}}</td>
+      <td *ngIf="isEven"> Par </td>
+      <td *ngIf="isOdd"> Impar </td>
+    </tr>
+  </table>
+</div>

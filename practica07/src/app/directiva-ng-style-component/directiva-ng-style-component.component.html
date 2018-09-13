@@ -1,0 +1,7 @@
+<div class="contenedor">
+  <h2>Prueba de ngStyle</h2>
+  <p>Introduce el color: </p>
+  <input type="text" [(ngModel)]="color">
+  <p>El color seleccionado es:</p> 
+  <h3><span [ngStyle]="{'color':color}">{{color}}</span> </h3>
+</div>

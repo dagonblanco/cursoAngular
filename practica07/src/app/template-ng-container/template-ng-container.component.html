@@ -1,0 +1,8 @@
+<div class="contenedor">
+  <h2>Ejemplo de template ng-container</h2>
+  <button (click)="cambiarCont()"> Cambiar continente </button>
+  <select [(ngModel)]="paisSel">
+    <ng-container *ngIf="europa"><option *ngFor="let paisActual of paisesEuropa" [ngValue]="paisActual">{{paisActual}}</option></ng-container>
+    <ng-container *ngIf="asia"><option *ngFor="let paisActual of paisesAsia" [ngValue]="paisActual">{{paisActual}}</option></ng-container>
+  </select>
+</div>

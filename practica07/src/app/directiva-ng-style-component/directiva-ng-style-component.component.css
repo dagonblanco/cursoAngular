@@ -1,0 +1,29 @@
+.caja-jugador {
+    height: 180px;
+    font-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    margin: 20PX;
+}
+
+.lakers {
+    border: 5px solid #552582;
+    color: #552582;
+    background-image: url('../../assets/img/lakers.svg');
+}
+
+.celtics {
+    border: 5px solid #008348;
+    color: #008348;
+    background-image: url('../../assets/img/celtics.svg');
+}
+
+.bulls {
+    border: 5px solid #CE1141;
+    color: #CE1141;
+    background-image: url('../../assets/img/bulls.svg');
+}

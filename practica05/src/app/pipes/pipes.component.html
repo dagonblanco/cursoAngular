@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Sin pipe</th>
+    <th>Con pipe</th>
+  </tr>
+  <tr><td>{{texto}}</td><td>{{texto | uppercase}}</td></tr>
+  <tr><td>{{texto}}</td><td>{{texto | lowercase}}</td></tr>
+  <tr><td>{{texto}}</td><td>{{texto | titlecase}}</td></tr>
+  <tr><td>{{id}}</td><td>{{id | slice : -3}}</td></tr>
+  <tr><td>{{fecha}}</td><td>{{fecha | date : "dd/MM/yyy hh:mm"}}</td></tr>
+  <tr><td>{{fecha}}</td><td>{{fecha | date : "long"}}</td></tr>
+  <tr><td>{{importe}}</td><td>{{importe | number: '4.2-2'}}</td></tr>
+  <tr><td>{{aciertos}}</td><td>{{aciertos | percent: '2.2-2'}}</td></tr>
+  <tr><td>{{importe}}</td><td>{{importe | currency: 'JPY'}}</td></tr>
+
+</table>
