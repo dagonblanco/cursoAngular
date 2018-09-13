@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+form, pre {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px grey;
+}
+
+form div {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+}
+
+select {
+    -webkit-appearance: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 0;
+    background-color: white;
+}
+
+button {
+    align-self: flex-end;
+    padding: 10px;
+    color: white;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(21, 113, 108);
+}
+
+button:disabled {
+    background-color: rgb(117, 179, 176);
+    cursor: not-allowed;
+}
+
+button:active {
+    outline: none;
+}
+
+input.ng-invalid.ng-touched {
+    border-style: solid;
+    border-color: #a94442;
+    border-width: 1px 1px 1px 5px;
+}
+    
+input.ng-valid.ng-dirty {
+    border-style: solid;
+    border-color: #42A948;
+    border-width: 1px 1px 1px 5px;
+}
+
+.novalido {
+    color: #a94442;
+    font-size: 16px;
+}
+
+input:read-only {
+    background-color: lightgray;
+}

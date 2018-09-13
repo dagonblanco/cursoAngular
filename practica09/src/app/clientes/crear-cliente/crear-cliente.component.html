@@ -1,0 +1,23 @@
+<h1>Ejemplo de formulario template driven</h1>
+<form #formCliente="ngForm" (ngSubmit)="crearCliente(formCliente)">
+  <div>
+    <label for="nombre">Nombre
+        <span class="novalido" *ngIf="nombre.invalid && nombre.touched">* Campo obligatorio</span>
+    </label>
+    <input type="text" id="nombre" name="nombre" ngModel required #nombre="ngModel">
+  </div>
+  <div>
+    <label for="cif">CIF</label>
+    <input type="text" id="cif" name="cif" ngModel>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" ngModel>
+  </div>
+  <div>
+    <button type="submit" [disabled]="formCliente.invalid">Añadir cliente</button>
+  </div>
+</form>
+<div class="contenedor">
+  <pre>{{cliente | json}}</pre>
+</div>
