@@ -9,6 +9,7 @@ import { ListadoClientesComponent } from './clientes/listado-clientes/listado-cl
 import { VerClienteComponent } from './clientes/ver-cliente/ver-cliente.component';
 import { CargaSuaveDirective } from './directivas/carga-suave.directive';
 import { rutas_app } from './app.routes';
+import { SinAutorizacionComponent } from './sin-autorizacion/sin-autorizacion.component';
 
 
 
@@ -19,7 +20,8 @@ import { rutas_app } from './app.routes';
     InicioComponent,
     ListadoClientesComponent,
     VerClienteComponent,
-    CargaSuaveDirective
+    CargaSuaveDirective,
+    SinAutorizacionComponent
   ],
   imports: [
     BrowserModule,
