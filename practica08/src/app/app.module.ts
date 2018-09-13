@@ -7,9 +7,10 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ListadoClientesComponent } from './clientes/listado-clientes/listado-clientes.component';
 import { VerClienteComponent } from './clientes/ver-cliente/ver-cliente.component';
-import { CargaSuaveDirective } from './directivas/carga-suave.directive';
+import { CargaSuaveDirective } from './utilidades/carga-suave.directive';
 import { rutas_app } from './app.routes';
 import { SinAutorizacionComponent } from './sin-autorizacion/sin-autorizacion.component';
+import { UtilidadesModule } from './utilidades/utilidades.module';
 
 
 
@@ -20,12 +21,12 @@ import { SinAutorizacionComponent } from './sin-autorizacion/sin-autorizacion.co
     InicioComponent,
     ListadoClientesComponent,
     VerClienteComponent,
-    CargaSuaveDirective,
     SinAutorizacionComponent
   ],
   imports: [
     BrowserModule,
-    rutas_app
+    rutas_app,
+    UtilidadesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

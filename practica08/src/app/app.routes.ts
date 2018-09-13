@@ -11,6 +11,7 @@ const rutas: Routes = [
     { path: 'sin-autorizacion', component: SinAutorizacionComponent},
     { path: 'listado-clientes', component: ListadoClientesComponent, data: { titulo: 'Listado de Clientes' } },
     { path: 'ver-cliente/:id', component: VerClienteComponent,canActivate:[AutenticacionGuard] },
+    { path: 'recursos-humanos', loadChildren: './rrhh/rrhh.module#RrhhModule'},
     { path: '**', component: InicioComponent } //Siempre al final!
   ];
 

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'practica08';
-  user = { nombre: 'David', rol: 'user' };
+  user = { nombre: 'David', rol: 'admin' };
 
   ngOnInit(): void {
     localStorage.setItem('user', JSON.stringify(this.user))
