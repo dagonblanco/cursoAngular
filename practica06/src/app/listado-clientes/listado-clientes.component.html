@@ -1,0 +1,5 @@
+<!-- <h2>Bienvenido {{clientesService.usuario}}</h2> Solo con servicio público-->
+<ul>
+  <li *ngFor="let cliente of clientes">Nombre: {{cliente.nombre}} - CIF: {{cliente.cif}}</li>
+</ul>
+<button (click)="nuevoCliente()">Nuevo cliente</button>

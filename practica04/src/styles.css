@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.marcador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 60px;
+    padding: 20px 40px;
+}
+
+.marcador div {
+    display: flex;
+    align-items: center;
+}
+
+.marcador .logo {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.marcador .nba {
+    margin: 0 20px;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+}
+
+.equipo {
+    width: 50%;
+}
+
+.equipo table {
+    width: 100%;
+    padding: 20px;
+}
+
+.lakers tr:nth-child(even) {
+    background-color: #FDB927;
+    color: #552583;
+    font-size: 20px;
+}
+
+.lakers tr:nth-child(odd) {
+    background-color: #552583;
+    color: #ffffff;
+    font-size: 20px;
+}
+.celtics tr:nth-child(even) {
+    background-color: #BA9653;
+    color: #008248;
+    font-size: 20px;
+}
+
+.celtics tr:nth-child(odd) {
+    background-color: #008248;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+td {
+    height: 80px;
+}
+
+img {
+    height: 60px;
+}
+
+.lakers button {
+    font-size: 16px;
+    color: #552583;
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: solid 2px #552583;
+    margin: 5px;
+}
+
+.celtics button {
+    font-size: 16px;
+    color: #008248;
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: solid 2px #008248;
+    margin: 5px;
+}
+
+td:nth-child(1){
+    padding-left: 10px;
+}
+
+td:nth-child(2) {
+    width: 1px;
+    white-space: nowrap;
+    padding: 10px;
+}

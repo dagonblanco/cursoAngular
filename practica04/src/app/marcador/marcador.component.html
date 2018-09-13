@@ -1,0 +1,17 @@
+<div class="marcador">
+  <div class="logo">
+    <img src="assets/img/LAL.svg" alt="">
+  </div>
+  <div>
+    <span>{{puntosLocales}}</span>
+    <img src="assets/img/NBA_Logo.svg" class="nba">
+    <span>{{puntosVisitantes}}</span>
+  </div>
+  <div class="logo">
+      <img src="assets/img/BOS.svg" alt="">
+    </div>
+</div>
+<div class="contenedor">
+    <app-jugadores class="equipo" [jugadores]="locales" (canasta)="getCanastaLocal($event)" [equipo]="equipoLocal"></app-jugadores>
+    <app-jugadores class="equipo" [jugadores]="visitantes" (canasta)="getCanastaVisitante($event)" [equipo]="equipoVisitante"></app-jugadores>
+</div>

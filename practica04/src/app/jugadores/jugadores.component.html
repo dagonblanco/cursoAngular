@@ -1,0 +1,19 @@
+<table [ngClass]="{'lakers':equipo === 'lakers', 'celtics':equipo==='celtics'}">
+  <tr *ngFor="let jugador of jugadores">
+    <!-- <td><img [src]="jugador.imagen"></td> -->
+    <td>{{jugador.nombre}}</td>
+    <!-- <td>{{jugador.puntos}}</td> -->
+    <td><button (click)="setCanasta(1,this.jugador.nombre)">Libre</button><button (click)="setCanasta(2,this.jugador.nombre)">Canasta</button><button (click)="setCanasta(3,this.jugador.nombre)">Triple</button></td>
+  </tr>
+</table>
+<table [ngClass]="{'lakers':equipo === 'lakers', 'celtics':equipo==='celtics'}">
+  <tr *ngFor="let jugador of topJugadores">
+    <td>
+      <img [src]="jugador.imagen"> {{jugador.nombre}}
+    </td>
+    <td>
+      {{jugador.puntos}}
+    </td>
+
+  </tr>
+</table>
