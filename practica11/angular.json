@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practica09": {
+    "practica11": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practica09",
+            "outputPath": "dist/practica11",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "practica09:build"
+            "browserTarget": "practica11:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "practica09:build:production"
+              "browserTarget": "practica11:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practica09:build"
+            "browserTarget": "practica11:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "practica09-e2e": {
+    "practica11-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "practica09:serve"
+            "devServerTarget": "practica11:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "practica09:serve:production"
+              "devServerTarget": "practica11:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "practica09"
+  "defaultProject": "practica11"
 }
