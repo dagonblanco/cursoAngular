@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CifValidator } from '../../cif.validator';
+import { FacturasService } from '../../servicios/facturas.service';
+import { Router } from '@angular/router';
+import { MensajesService } from '../../servicios/mensajes.service';
+
 
 @Component({
   selector: 'app-crear-factura',
@@ -13,7 +17,7 @@ export class CrearFacturaComponent implements OnInit {
   fechaActual = new Date();
   factura: any;
 
-  constructor() { }
+  constructor(private facturaService: FacturasService, private router: Router, private mensajesService:MensajesService) { }
 
   ngOnInit() {
     this.formFra = new FormGroup({
@@ -33,17 +37,15 @@ export class CrearFacturaComponent implements OnInit {
     this.cambios()
   }
 
-  cambios(): void{
+  cambios(): void {
     this.formFra.valueChanges
-                    .subscribe( form => {
-                       this.formFra.get('iva').patchValue(form.base * form.tipo, {emitEvent: false});
-                       this.formFra.get('total').patchValue(this.formFra.get('base').value + this.formFra.get('iva').value, {emitEvent: false});
-                    })
-    this.formFra.get('numero').valueChanges
-                    .subscribe ( numero => console.log(numero));
+      .subscribe(form => {
+        this.formFra.get('iva').patchValue(form.base * form.tipo, { emitEvent: false });
+        this.formFra.get('total').patchValue(this.formFra.get('base').value + this.formFra.get('iva').value, { emitEvent: false });
+      })
   }
 
-  crearFactura(){
+  crearFactura() {
     this.factura = {
       nombre: this.formFra.get('nombre').value,
       cif: this.formFra.get('cif').value,
@@ -55,6 +57,18 @@ export class CrearFacturaComponent implements OnInit {
       contabilizadoPor: 'Juan Pérez',
       fechaCont: this.fechaActual
     }
+
+    this.facturaService.postFactura(this.factura).subscribe(
+      (res: any) => { //ok
+        console.log("Post ok: " + JSON.stringify(this.factura));
+        this.mensajesService.enviarMensaje("Alta de factura OK: " + JSON.stringify(this.factura));
+        this.router.navigate(['/']);
+     }, 
+      (res: any) => { //error
+        console.log("Post error: " + JSON.stringify(this.factura.stringify()));
+      } 
+
+    );
   }
 
 }
