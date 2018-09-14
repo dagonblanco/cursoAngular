@@ -34,7 +34,7 @@ export class Ejemplo2Component implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // this.mensajes.unsubscribe();
+    this.mensajes.unsubscribe();
   }
 
 }

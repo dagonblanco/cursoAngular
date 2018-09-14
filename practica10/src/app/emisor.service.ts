@@ -18,8 +18,8 @@ export class EmisorService {
         observer.next('Segundo mensaje');
       }, 2000);
       setTimeout(() => {
-        // observer.error('Error');
-        // observer.complete();
+        //observer.error('Error');
+        //observer.complete();
       }, 3000);
       setTimeout(() => {
         observer.next('N mensaje');
