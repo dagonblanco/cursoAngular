@@ -24,7 +24,7 @@ export class CrearFacturaComponent implements OnInit {
       nombre: new FormControl('', [Validators.required, Validators.minLength(3)]),  // Validators.pattern('expresión regular')
       cif: new FormControl('', [CifValidator.checkCif, Validators.minLength(9)]),
       numero: new FormControl(''),
-      fecha: new FormControl(null),
+      fecha: new FormControl(new Date().toISOString().slice(0,10)),
       base: new FormControl(null),
       tipo: new FormControl(0.21),
       iva: new FormControl(null),
@@ -60,12 +60,12 @@ export class CrearFacturaComponent implements OnInit {
 
     this.facturaService.postFactura(this.factura).subscribe(
       (res: any) => { //ok
-        console.log("Post ok: " + JSON.stringify(this.factura));
+        console.log("Insert ok: " + JSON.stringify(this.factura));
         this.mensajesService.enviarMensaje("Alta de factura OK: " + JSON.stringify(this.factura));
         this.router.navigate(['/']);
      }, 
       (res: any) => { //error
-        console.log("Post error: " + JSON.stringify(this.factura.stringify()));
+        console.log("Insert error: " + JSON.stringify(this.factura.stringify()));
       } 
 
     );

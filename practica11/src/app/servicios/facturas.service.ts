@@ -12,6 +12,22 @@ export class FacturasService {
   constructor(private http: HttpClient) { }
 
   postFactura(factura) {
-    return this.http.post(this.url, factura).pipe(map((resp:any)=>resp.ok));
+    return this.http.post(this.url, factura).pipe(map((resp: any) => resp.ok));
+  }
+
+  getFacturas() {
+    return this.http.get(this.url).pipe(map((resp: any) => resp.ok ? resp.facturas : resp.mensaje));
+  }
+
+  getFacturaById(id) {
+    return this.http.get(this.url + `/${id}`).pipe(map((resp: any) => resp.ok ? resp.factura : resp.mensaje));
+  }
+
+  putFactura(id,factura) {
+    return this.http.put(this.url + `/${id}`, factura).pipe(map((resp: any) => resp.ok));
+  }
+
+  deleteFactura(id) {
+    return this.http.delete(this.url + `/${id}`).pipe(map((resp: any) => resp.ok?resp.mensaje:resp));
   }
 }

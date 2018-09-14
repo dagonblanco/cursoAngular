@@ -43,7 +43,7 @@ app.post('/', (req, res)=>{
         fecha: body.fecha,
         base: body.base,
         tipo: body.tipo,
-        pago: body.cobro,
+        pago: body.pago,
         contabilizadoPor: body.contabilizadoPor,
         fechaCont: body.fechaCont
     });
